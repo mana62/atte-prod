@@ -20,7 +20,7 @@ services:
         environment:
             - PHP_INI_DIR=/usr/local/etc/php
         env_file:
-            - .env.local
+            - ./src/.env.local
 
     mysql:
         image: mysql:8.0.26
