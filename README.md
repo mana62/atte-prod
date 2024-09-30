@@ -8,17 +8,19 @@
 # アプリケーションURL
 <開発環境><br>
 ・phpmyadmin http://localhost:8080/<br>
-・アプリurl http://localhost/register<br>
+・アプリurl http://localhost<br>
 
 <本番環境><br>
 ・phpmyadmin<br>
 ・アプリurl<br>
 
 
-#　他のリポジトリ
+#　他のリポジトリ><br>
 <開発環境><br>
+https://github.com/mana62/atte-local
 
 <本番環境><br>
+https://github.com/mana62/atte-prod
 
 # 機能一覧
 ・会員登録<br>
@@ -36,18 +38,18 @@
 
 
 # 使用技術
-・nginx: 1.21.1<br>
-・php: 7.4.9-fpm<br>
+・nginx: latest<br>
+・php: 8.1-fpm<br>
 ・mysql: 8.0.26<br>
 ・Laravel: 8<br>
 
 
 # テーブル設計
-![テーブル仕様書](https://github.com/user-attachments/assets/bd2cb4e9-2c88-4ffb-846e-ea4c39207768)
+![テーブル仕様書](https://github.com/user-attachments/assets/dfd993eb-30ba-46c6-bd18-e313cedb91b4)
 
 
 # ER図
-![ER図 ](https://github.com/user-attachments/assets/8102b42a-0f58-4ebd-ad86-20276e61e513)
+![ER図 ](https://github.com/user-attachments/assets/8a6d8a73-fca7-46f6-abd1-1a06bcfe09fb)
 
 
 # 環境構築
