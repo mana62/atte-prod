@@ -15,10 +15,12 @@
 ・アプリurl<br>
 
 
-#　他のリポジトリ
+#　他のリポジトリ><br>
 <開発環境><br>
+https://github.com/mana62/atte-local
 
 <本番環境><br>
+https://github.com/mana62/atte-prod
 
 # 機能一覧
 ・会員登録<br>
