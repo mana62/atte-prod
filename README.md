@@ -15,7 +15,7 @@
 ・アプリurl<br>
 
 
-#　他のリポジトリ><br>
+# 他のリポジトリ
 <開発環境><br>
 https://github.com/mana62/atte-local
 
