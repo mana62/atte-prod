@@ -7,7 +7,7 @@
 # アプリケーションURL
 <開発環境><br>
 ・phpmyadmin http://localhost:8080/<br>
-・アプリurl http://localhost<br>
+・アプリurl http://localhost/register<br>
 
 <本番環境><br>
 ・phpmyadmin  https://atte.ddns.net<br>
