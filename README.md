@@ -1,7 +1,6 @@
 # 勤怠管理アプリ  Atte
 ・従業員の勤怠管理アプリ<br>
 
-
 # 作成した目的
 ・人事評価のため<br>
 
@@ -11,9 +10,8 @@
 ・アプリurl http://localhost<br>
 
 <本番環境><br>
-・phpmyadmin<br>
-・アプリurl<br>
-
+・phpmyadmin  https://atte.ddns.net<br>
+・アプリurl  https://atte.ddns.net:8081<br>
 
 # 他のリポジトリ
 <開発環境><br>
@@ -69,7 +67,7 @@ https://github.com/mana62/atte-prod
 14. (php artisan migrate)
 15. (php artisan db:seed)
 16. AWS環境構築（ストレージをS3、バックエンドをEC2、データベースをRDS）
-17. 開発環境と本番環境の切り替え
+17. 開発環境と本番環境の切り替え(Railwayでのデプロイ)
 
 
 # その他

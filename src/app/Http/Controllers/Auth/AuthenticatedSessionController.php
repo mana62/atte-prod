@@ -32,15 +32,23 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->route('stamping');
     }
 
     /**
      * Destroy an authenticated session.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
      * @return \Illuminate\Http\RedirectResponse
      */
+
+    protected function authenticated(Request $request, $user)
+    {
+        return redirect()->route('stamping');
+    }
+
+
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
@@ -49,6 +57,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('login');
     }
 }

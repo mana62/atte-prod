@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\StampingController;
 use App\Http\Controllers\AttendanceSheetController;
 use App\Http\Controllers\UserAttendanceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,10 +30,9 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
-
 // 打刻機能
-Route::get('/', [StampingController::class, 'index'])->name('stamping');
-Route::post('/', [StampingController::class, 'store'])->name('stamping.store');
+Route::get('/stamping', [StampingController::class, 'index'])->name('stamping');
+Route::post('/stamping', [StampingController::class, 'store'])->name('stamping.store');
 
 
 //勤怠管理

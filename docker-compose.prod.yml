@@ -28,7 +28,7 @@ services:
             - DB_USERNAME=atte-database
             - DB_PASSWORD=atte-password0602
         env_file:
-            - ./src/.env
+        - ./src/.env
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin:latest
