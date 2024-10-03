@@ -16,6 +16,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     && composer self-update \
     && composer clear-cache
 
+RUN docker-php-ext-install pdo pdo_pgsql
+
+
 WORKDIR /var/www
 
 RUN composer install --no-dev --optimize-autoloader
