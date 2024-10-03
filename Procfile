@@ -1,1 +1,2 @@
-web: docker build -t web ./ && docker run web
+web: vendor/bin/heroku-php-nginx -C public/
+
