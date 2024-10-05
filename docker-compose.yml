@@ -8,7 +8,7 @@ services:
     volumes:
       - ./docker/nginx/${NGINX_CONF_FILE}:/etc/nginx/conf.d/default.conf
       - ./src:/var/www/
-      - /etc/letsencrypt:/etc/letsencrypt
+      - /etc/letsencrypt/live/atte.ddns.net:/etc/letsencrypt/live/atte.ddns.net
     depends_on:
       - php
 
@@ -43,7 +43,6 @@ services:
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-    command: mysqld
     ports:
       - "3306:3306"
 
