@@ -1,0 +1,20 @@
+From a3d858b0bff125c5553701f5b6af11e7ab268a8f Mon Sep 17 00:00:00 2001
+From: mana <mana66354@gmail.com>
+Date: Sat, 5 Oct 2024 08:43:05 +0000
+Subject: [PATCH 2/3] fix
+
+---
+ .gitignor | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignor
+
+diff --git a/.gitignor b/.gitignor
+new file mode 100644
+index 0000000..9231bc7
+--- /dev/null
++++ b/.gitignor
+@@ -0,0 +1 @@
++docker/mysql/data/
+-- 
+2.46.2
+
