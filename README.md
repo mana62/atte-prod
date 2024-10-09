@@ -68,9 +68,13 @@ https://github.com/mana62/atte-prod
 13. .env ファイルの環境変数を変更
 14. (php artisan migrate)
 15. (php artisan db:seed)
-16. AWS環境構築（ストレージをS3、バックエンドをEC2、データベースをRDS）
-17. 開発環境と本番環境の切り替え
-
+16. 本番用のリモートリポジトリを作成
+17. (.env.local)(.env.prod)開発、本番用.env作成
+18. <開発>(docker compose --env-file ./src/.env.local up --build)<br>
+<本番>(docker-compose --env-file ./src/.env.prod up --build)
+19. AWS環境構築（ストレージをS3、バックエンドをEC2、データベースをRDS）
+20. EC2内でgitをクローン
+21. 開発環境と本番環境の切り替え
 
 # その他
 
