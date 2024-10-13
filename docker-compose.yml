@@ -7,7 +7,7 @@ services:
       - "443:443"
     volumes:
       - ./docker/nginx/${NGINX_CONF_FILE}:/etc/nginx/conf.d/default.conf
-      - ./src:/var/www/
+      - /home/ec2-user/atte-prod/src:/var/www/src
       - /etc/letsencrypt/live/atte.ddns.net:/etc/letsencrypt/live/atte.ddns.net
       - /etc/letsencrypt/archive/atte.ddns.net:/etc/letsencrypt/archive/atte.ddns.net
     depends_on:
@@ -22,9 +22,9 @@ services:
         APP_ENV: ${APP_ENV}
     container_name: php
     volumes:
-      - ./src:/var/www/
+      - /home/ec2-user/atte-prod/src:/var/www/src
     ports:
-      - "9000:9000"
+      - "9001:9001"
     environment:
       - DB_CONNECTION=${DB_CONNECTION}
       - DB_HOST=${DB_HOST}

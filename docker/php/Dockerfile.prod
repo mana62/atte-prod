@@ -30,5 +30,5 @@ RUN composer install --no-dev --optimize-autoloader
 #Nginxの設定ファイルを配置
 COPY nginx/default.prod.conf /etc/nginx/conf.d/default.prod.conf
 
-# PHP-FPMをデフォルトで起動
+#PHP-FPMをデフォルトで起動
 CMD ["php-fpm"]
