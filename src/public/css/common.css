@@ -45,17 +45,3 @@ footer {
     width: 100%;
     margin-bottom: 20px;
 }
-
-@media screen and (min-width: 768px) {
-    .practice__card {
-        width: 45%;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .practice__card {
-        width: 30%;
-        margin-bottom: 20px;
-    }
-}
