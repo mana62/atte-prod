@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
-// 打刻機能
+//打刻機能
 Route::get('/stamping', [StampingController::class, 'index'])->name('stamping');
 Route::post('/stamping', [StampingController::class, 'store'])->name('stamping.store');
 

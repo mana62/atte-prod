@@ -24,7 +24,7 @@ services:
     volumes:
       - /home/ec2-user/atte-prod/src:/var/www/src
     ports:
-      - "9001:9001"
+      - "9000:9000"
     environment:
       - DB_CONNECTION=${DB_CONNECTION}
       - DB_HOST=${DB_HOST}
