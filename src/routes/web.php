@@ -21,7 +21,7 @@ use App\Http\Controllers\UserAttendanceController;
 
 //Breezeが提供するルート
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.register');
 });
 
 //認証が必要なルート

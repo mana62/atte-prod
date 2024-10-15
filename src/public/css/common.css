@@ -47,17 +47,15 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-    .attendance-button__submit {
-        font-size: 16px;
-        padding: 12px 24px;
-        width: 80%;
+    .practice__card {
+        width: 45%;
+        margin-bottom: 20px;
     }
 }
 
 @media screen and (min-width: 1000px) {
-    .attendance-button__submit {
-        font-size: 18px;
-        padding: 15px 30px;
-        width: 60%;
+    .practice__card {
+        width: 30%;
+        margin-bottom: 20px;
     }
 }
