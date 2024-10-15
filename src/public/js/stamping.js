@@ -7,6 +7,8 @@ $.ajaxSetup({
 document.addEventListener("DOMContentLoaded", function () {
     const attendanceData = window.attendanceData;
 
+    const breakTimesExist = attendanceData && attendanceData.breakTimes && Array.isArray(attendanceData.breakTimes);
+
     const startBreakButton = document.getElementById("startBreakButton");
     const finishBreakButton = document.getElementById("finishBreakButton");
     const startButton = document.getElementById("startButton");

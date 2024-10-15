@@ -67,5 +67,4 @@
 .attendance-button__submit:disabled {
     background-color: #f0eded;
     cursor: not-allowed;
-
 }
