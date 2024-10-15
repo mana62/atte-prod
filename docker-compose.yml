@@ -23,8 +23,9 @@ services:
     container_name: php
     volumes:
       - /home/ec2-user/atte-prod/src:/var/www/src
+      - /home/ec2-user/php-fpm-config/www.conf:/usr/local/etc/php-fpm.d/www.conf
     ports:
-      - "9001:9001"
+      - "9000:9000"
     environment:
       - DB_CONNECTION=${DB_CONNECTION}
       - DB_HOST=${DB_HOST}
