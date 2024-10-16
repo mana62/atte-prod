@@ -41,7 +41,19 @@ footer {
     z-index: 1000;
 }
 
-.practice__card {
-    width: 100%;
-    margin-bottom: 20px;
+/* レスポンシブ (768px以上)*/
+@media (max-width: 768px) {
+    main {
+        min-height: auto;
+        padding: 15px;
+        margin-bottom: 100px;
+    }
+
+/* レスポンシブ (1000px以上)*/
+@media screen and (min-width: 1000px) {
+    .practice__card {
+        width: 30%;
+        margin-bottom: 0;
+    }
+    }
 }

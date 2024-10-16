@@ -79,10 +79,10 @@
         </div>
     </div>
 
-@section('js')
+    @section('js')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        window.attendanceData = @json($attendance);
+    window.attendanceData = @json($attendance);
     </script>
     <script src="{{ asset('js/stamping.js') }}"></script>
 @endsection

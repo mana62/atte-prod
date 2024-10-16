@@ -16,7 +16,7 @@ services:
   php:
     build:
       context: .
-      dockerfile: ./docker/php/Dockerfile
+      dockerfile: ./docker/php/${DOCKERFILE}
       args:
         NGINX_CONF_FILE: ${NGINX_CONF_FILE}
         APP_ENV: ${APP_ENV}
