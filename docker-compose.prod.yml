@@ -1,5 +1,8 @@
+version: '3'
 services:
   mysql:
-    entrypoint: /bin/true
+    profiles:
+      - disabled
   mailhog:
-    entrypoint: /bin/true
+    profiles:
+      - disabled
