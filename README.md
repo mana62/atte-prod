@@ -11,7 +11,7 @@
 ・dockerは.envによって切り分ける (起動)docker compose --env-file ./src/.env.local up --build<br>
 
 <本番環境><br>
-・phpmyadmin  https://atte.ddns.net:8080<br>
+・phpmyadmin  http://localhost:8080<br>
 ・アプリurl  https://atte.ddns.net<br>
 ・dockerは.envによって切り分ける (起動)docker-compose --env-file ./src/.env.prod up --build<br>
 
@@ -72,9 +72,10 @@ https://github.com/mana62/atte-prod
 17. (.env.local)(.env.prod)開発、本番用.env作成
 18. <開発>(docker compose --env-file ./src/.env.local up --build)<br>
 <本番>(docker-compose --env-file ./src/.env.prod up --build)
-19. AWS環境構築（ストレージをS3、バックエンドをEC2、データベースをRDS）
-20. EC2内でgitをクローン
-21. 開発環境と本番環境の切り替え
+19. 開発環境と本番環境の切り替え
+20. AWS環境構築（ストレージをS3、バックエンドをEC2、データベースをRDS）
+21. EC2内でgitをクローン
+22. SSL証明書の設定
 
 # その他
 
