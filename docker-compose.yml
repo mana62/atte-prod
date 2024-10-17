@@ -53,7 +53,7 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
     environment:
-      - PMA_HOST=${DB_HOST}
+      - PMA_HOST=${PMA_HOST}
       - PMA_USER=${DB_USERNAME}
       - PMA_PASSWORD=${DB_PASSWORD}
     ports:

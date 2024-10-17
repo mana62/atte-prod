@@ -13,7 +13,8 @@
 <本番環境><br>
 ・phpmyadmin  http://localhost:8080<br>
 ・アプリurl  https://atte.ddns.net<br>
-・dockerは.envによって切り分ける (起動)docker-compose --env-file ./src/.env.prod up --build<br>
+・dockerは.envによって切り分ける <br>
+(起動)docker-compose --env-file ./src/.env.prod -f docker-compose.yml -f docker-compose.prod.yml up -d<br>
 
 # 他のリポジトリ
 <開発環境><br>
