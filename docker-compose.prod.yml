@@ -1,0 +1,5 @@
+services:
+  mysql:
+    entrypoint: /bin/true
+  mailhog:
+    entrypoint: /bin/true
