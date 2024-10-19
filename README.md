@@ -6,14 +6,13 @@
 
 # アプリケーションURL
 <開発環境><br>
-・phpmyadmin<br>
-http://localhost:8080/<br>
-・アプリurl<br>
-http://localhost/register<br>
+・phpmyadmin http://localhost:8080/<br>
+・アプリurl http://localhost/register<br>
 ・dockerは.envによって切り分ける<br>
-(サービスのビルド)docker compose --env-file ./src/.env.local up --build<br>
+(サービスのビルド)<br>
+docker compose --env-file ./src/.env.local up --build<br>
 (サービスの再起動)<br>
-docker compose --env-file ./src/.env.local restart
+docker compose --env-file ./src/.env.local restart<br>
 
 <本番環境><br>
 ・phpmyadmin<br>
