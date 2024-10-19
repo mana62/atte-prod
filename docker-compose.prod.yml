@@ -6,3 +6,4 @@ services:
   mailhog:
     profiles:
       - disabled
+
