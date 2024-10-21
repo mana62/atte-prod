@@ -84,7 +84,7 @@
         </table>
 
         <div class="pagination">
-            {{ $users->links('vendor.pagination.custom') }}
+             {{ $users->links('vendor.pagination.custom') }}
         </div>
     </div>
 @endsection
