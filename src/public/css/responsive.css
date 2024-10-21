@@ -1,0 +1,36 @@
+/* スマホ用 (幅480px以下) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .register-form__item-input,
+    .login-form__item-input {
+        width: 100%;
+    }
+}
+
+/* タブレット用 (幅481px〜1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    .register-form__item-input,
+    .login-form__item-input {
+        width: 50%;
+    }
+}
+
+/* PC用 (幅1025px以上) */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .register-form__item-input,
+    .login-form__item-input {
+        width: 40%;
+    }
+}

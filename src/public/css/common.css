@@ -1,6 +1,5 @@
 .header {
     background: #fff;
-    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,26 +33,9 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: fixed;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     width: 100%;
     background: #fff;
     z-index: 1000;
-}
-
-/* レスポンシブ (768px以上)*/
-@media (max-width: 768px) {
-    main {
-        min-height: auto;
-        padding: 15px;
-        margin-bottom: 100px;
-    }
-
-/* レスポンシブ (1000px以上)*/
-@media screen and (min-width: 1000px) {
-    .practice__card {
-        width: 30%;
-        margin-bottom: 0;
-    }
-    }
 }
