@@ -15,7 +15,7 @@ class AttendanceSheetController extends Controller
     {
         $users = User::with([
             'attendanceSheets' => function ($query) {
-                $query->orderBy('start_time', 'desc'); // 出勤情報を開始時間の降順でソート
+                $query->orderBy('start_time', 'desc')->limit(1);
             }
         ])->paginate(5);
 
@@ -25,9 +25,9 @@ class AttendanceSheetController extends Controller
     //日付
     public function show($date)
     {
-        $date = Carbon::parse($date)->setTimezone('Asia/Tokyo'); //文字列から日付や時刻(tokyoの時間)を扱える形式に変換して$dataに格納
+        $date = Carbon::parse($date)->setTimezone('Asia/Tokyo');
 
-        $users = User::whereHas('attendanceSheets', function ($query) use ($date) { //userモデルから関連するデータを探す、useで外部変数を使用
+        $users = User::whereHas('attendanceSheets', function ($query) use ($date) {
             $query->whereDate('start_time', $date->format('Y-m-d'));
         })
             ->with([
@@ -43,7 +43,7 @@ class AttendanceSheetController extends Controller
 
     public function total($id)
 {
-    $attendance = AttendanceSheet::with('breakTimes')->find($id); //リレーションとIDで勤務データを取得
+    $attendance = AttendanceSheet::with('breakTimes')->find($id);
 
     if ($attendance && $attendance->start_time && $attendance->finish_time) { //勤務開始・終了が存在する場合
         //勤務時間の計算

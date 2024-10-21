@@ -6,16 +6,25 @@
 
 # アプリケーションURL
 <開発環境><br>
-・phpmyadmin http://localhost:8080/<br>
-・アプリurl http://localhost/register<br>
+・phpmyadmin<br>
+http://localhost:8080/<br>
+・アプリurl<br>
+http://localhost/register<br>
 ・dockerは.envによって切り分ける<br>
-(起動)docker compose --env-file ./src/.env.local up --build<br>
+(サービスのビルド)docker compose --env-file ./src/.env.local up --build<br>
+(サービスの再起動)<br>
+docker compose --env-file ./src/.env.local restart
 
 <本番環境><br>
-・phpmyadmin  http://localhost:8080<br>
-・アプリurl  https://atte.ddns.net<br>
+・phpmyadmin<br>
+http://localhost:8080<br>
+・アプリurl<br>
+https://atte.ddns.net<br>
 ・dockerは.envによって切り分ける <br>
-(起動)docker-compose --env-file ./src/.env.prod build nginx php phpmyadmin<br>
+(サービスのビルド)<br>
+docker-compose --env-file ./src/.env.prod build nginx php phpmyadmin<br>
+(サービスの再起動)<br>
+docker-compose --env-file ./src/.env.prod up -d --no-deps nginx phpmyadmin php<br>
 
 # 他のリポジトリ
 <開発環境><br>
@@ -38,21 +47,17 @@ https://github.com/mana62/atte-prod
 ・ユーザーごとの勤怠表ページ<br>
 ・メール認証
 
-
 # 使用技術
 ・nginx: latest<br>
 ・php: 8.1-fpm<br>
 ・mysql: 8.0.26<br>
 ・Laravel: 8<br>
 
-
 # テーブル設計
 ![テーブル仕様書](https://github.com/user-attachments/assets/dfd993eb-30ba-46c6-bd18-e313cedb91b4)
 
-
 # ER図
 ![ER図 ](https://github.com/user-attachments/assets/8a6d8a73-fca7-46f6-abd1-1a06bcfe09fb)
-
 
 # 環境構築
 1. リモートリポジトリを作成
