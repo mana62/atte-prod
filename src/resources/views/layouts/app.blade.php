@@ -10,6 +10,7 @@
     <link rel="icon" href="{{ asset('img/favicon.ico') }}" />
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     @yield('css')
 </head>
 

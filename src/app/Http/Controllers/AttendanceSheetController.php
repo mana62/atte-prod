@@ -59,7 +59,7 @@ class AttendanceSheetController extends Controller
                 $finishBreak = Carbon::parse($breakTime->finish_break);
                 return $carry + $finishBreak->diffInMinutes($startBreak);
             }
-            return $carry; //休憩終了時間がない場合、合計に追加しない
+            return $carry;
         }, 0);
 
         //実働時間 = 勤務時間 - 休憩時間
@@ -67,12 +67,12 @@ class AttendanceSheetController extends Controller
 
         return view('attendance.total', [
             'attendance' => $attendance,
-            'totalWorkHours' => floor($totalWorkMinutes / 60),  //勤務時間（時間）
-            'totalWorkMinutes' => $totalWorkMinutes % 60,        //勤務時間（分）
-            'totalBreakHours' => floor($totalBreakMinutes / 60), //休憩時間（時間）
-            'totalBreakMinutes' => $totalBreakMinutes % 60,      //休憩時間（分）
-            'actualWorkHours' => floor($actualWorkMinutes / 60), //実働時間（時間）
-            'actualWorkMinutes' => $actualWorkMinutes % 60,      //実働時間（分）
+            'totalWorkHours' => floor($totalWorkMinutes / 60),
+            'totalWorkMinutes' => $totalWorkMinutes % 60,
+            'totalBreakHours' => floor($totalBreakMinutes / 60),
+            'totalBreakMinutes' => $totalBreakMinutes % 60,
+            'actualWorkHours' => floor($actualWorkMinutes / 60),
+            'actualWorkMinutes' => $actualWorkMinutes % 60,
         ]);
     }
 
