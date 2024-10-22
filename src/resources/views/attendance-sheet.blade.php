@@ -13,7 +13,6 @@
         use Carbon\Carbon;
         $showDays = 365;
         $currentDate = isset($date) ? Carbon::parse($date) : Carbon::now('Asia/Tokyo');
-        //$dateに変数があるか確認、文字列を日時や時刻に変換、今の時間を取得
 
         $startDate = $currentDate->copy()->subDays(floor($showDays / 2)); //subDays = 日付オブジェクトから指定した日数を引く
         //今の日時をコピー、$showDaysを2で割り、floorで小数点を切り捨てる、subDays(...)で最後に、取得した整数の日数を現在の日付から引く($showDaysの半分の日数を減少させる)
@@ -74,7 +73,6 @@
                             'STR_PAD_LEFT'左側に'0'を追加して、全体の長さが2桁になるようにする --}}
                         </td>
                         {{-- 勤務時間 --}}
-                        {{-- 勤務時間 --}}
                         <td class="content-table__item">
                             {{ floor($totalWorkTime / 60) }}時{{ str_pad($totalWorkTime % 60, 2, '0', STR_PAD_LEFT) }}分
                         </td>
@@ -84,7 +82,7 @@
         </table>
 
         <div class="pagination">
-             {{ $users->links('vendor.pagination.custom') }}
+            {{ $users->links('vendor.pagination.custom') }}
         </div>
     </div>
 @endsection

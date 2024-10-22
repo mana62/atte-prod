@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\StampingController;
 use App\Http\Controllers\AttendanceSheetController;
 use App\Http\Controllers\UserAttendanceController;
