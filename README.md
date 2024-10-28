@@ -19,7 +19,7 @@ docker compose --env-file ./src/.env.local restart<br>
 <本番環境><br>
 ・phpmyadmin<br>
 http://localhost:8080<br>
-※EC2のセキュリティ上の問題で、自分のPCのみでしか見れません。
+※EC2のセキュリティ上の問題で、自分のPCのみでしか見れません。<br>
 ・アプリurl<br>
 https://atte.ddns.net<br>
 
