@@ -19,13 +19,9 @@ docker compose --env-file ./src/.env.local restart<br>
 <本番環境><br>
 ・phpmyadmin<br>
 http://localhost:8080<br>
+※EC2のセキュリティ上の問題で、自分のPCのみでしか見れません。
 ・アプリurl<br>
 https://atte.ddns.net<br>
-・dockerは.envによって切り分ける <br>
-(サービスのビルド)<br>
-docker-compose --env-file ./src/.env.prod build nginx php phpmyadmin<br>
-(サービスの再起動)<br>
-docker-compose --env-file ./src/.env.prod up -d --no-deps nginx phpmyadmin php<br>
 
 # 他のリポジトリ
 <開発環境><br>
@@ -86,5 +82,4 @@ https://github.com/mana62/atte-prod
 22. SSL証明書の設定
 
 # その他
-
-
+本来は.envはgitignoreに入れますが、採点でbuildが必要なため、入れていません。
