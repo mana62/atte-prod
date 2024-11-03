@@ -71,38 +71,56 @@ https://github.com/mana62/atte-prod
 6. PHP の設定
 7. MySQL の設定
 8. phpMyAdmin の設定
-9. docker-compose up -d --build
-10. docker-compose exec php bash
+9. docker compose up -d --build
+10. docker compose exec php bash
 11. composer create-project "laravel/laravel=8.\*" . --prefer-dist
 12. app.php の timezone を修正
 13. .env ファイルの環境変数を変更
-14. php artisan migrate
-15. php artisan db
-16. 本番用のリモートリポジトリを作成
-17. .env.local, .env.prod 開発、本番用.env 作成
-18. 環境別に Docker コンテナを起動<br>
-    <開発>(docker compose --env-file ./src/.env.local up --build)<br>
-    <本番>(docker-compose --env-file ./src/.env.prod up --build)
-19. 開発環境と本番環境の切り替え
-20. AWS 環境構築（ストレージを S3、バックエンドを EC2、データベースを RDS）
-21. EC2 内で git をクローン
-22. SSL 証明書の設定
+14. php artisan key:generate
+15. docker の再起動
+16. php artisan migrate
+17. php artisan db
+18. 本番用のリモートリポジトリを作成
+19. .env.local, .env.prod 開発、本番用.env 作成
+20. 環境別に Docker コンテナを起動<br>
+21. 開発環境と本番環境の切り替え<br>
+22. AWS 環境構築（ストレージを S3、バックエンドを EC2、データベースを RDS）<br>
+23. EC2 内で git をクローン<br>
+24. SSL 証明書の設定<br>
 
 # クローンの流れ
 
-1. Git リポジトリのクローン<br>
-   (git clone git@github.com:mana62/atte-local.git) <br>
-2. Docker の設定<br>
-   (docker compose up -d --build) <br>
-3. PHP コンテナにアクセス<br>
-   (docker compose exec -it php bash)<br>
-4. Laravel パッケージのインストール<br>
-   (composer install)<br>
-5. .env ファイルの作成<br>
-   (cp .env.example .env)<br>
-6. .env ファイルの編集<br>
-   (yml からデータベースの情報を記載)<br> (MAIL_FROM_ADDRESS=test@example.com)<br>
-7. マイグレーション<br>
-   (php artisan migrate) <br>
-8. シーディング<br>
-   (php artisan db:seed) <br>
+1.  Git リポジトリのクローン<br>
+    git clone git@github.com:mana62/atte-local.git<br>
+    cd atte-local<br>
+2.  Docker の設定<br>
+    docker compose up -d --build <br>
+3.  PHP コンテナにアクセス<br>
+    docker compose exec -it php bash<br>
+4.  Laravel パッケージのインストール<br>
+    composer install<br>
+5.  .env ファイルの作成<br>
+    cp .env.example .env<br>
+6.  .env ファイルの編集<br>
+
+DB_CONNECTION=mysql<br>
+DB_HOST=mysql<br>
+DB_PORT=3306<br>
+DB_DATABASE=db-atte<br>
+DB_USERNAME=user<br>
+DB_PASSWORD=pass<br>
+
+MAIL_MAILER=smtp<br>
+MAIL_HOST=mailhog<br>
+MAIL_PORT=1025<br>
+MAIL_FROM_ADDRESS=test@example.com<br>
+
+7. アプリケーションキーの生成<br>
+   php artisan key:generate<br>
+8. Docker コンテナの再起動 (.env ファイルを読み込む)<br>
+   docker compose down<br>
+   docker compose up -d --build<br>
+9. マイグレーション<br>
+   php artisan migrate <br>
+10. シーディング<br>
+    php artisan db:seed<br>

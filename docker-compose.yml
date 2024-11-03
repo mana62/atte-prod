@@ -46,6 +46,7 @@ services:
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     ports:
       - "3306:3306"
+    restart: always
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -66,3 +67,4 @@ services:
     ports:
       - "1025:1025"
       - "8025:8025"
+    restart: always
