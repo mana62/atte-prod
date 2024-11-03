@@ -1,0 +1,64 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/default.prod.conf:/etc/nginx/conf.d/default.conf
+      - /home/ec2-user/atte-prod/src:/var/www/src/public
+      - /etc/letsencrypt/live/atte.ddns.net:/etc/letsencrypt/live/atte.ddns.net
+      - /etc/letsencrypt/archive/atte.ddns.net:/etc/letsencrypt/archive/atte.ddns.net
+    depends_on:
+      - php
+    restart: always
+
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile.prod
+      args:
+        APP_ENV: production
+    container_name: php
+    volumes:
+      - /home/ec2-user/atte-prod/src:/var/www/src/public
+    ports:
+      - "9000:9000"
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=db-atte.cpoiqs8q0a02.ap-northeast-1.rds.amazonaws.com
+      - DB_PORT=3306
+      - DB_DATABASE=atte
+      - DB_USERNAME=db-atte
+      - DB_PASSWORD=atte-root-pass
+    depends_on:
+      - mysql
+    restart: always
+
+  mysql:
+    image: mysql:8.0.26
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: atte
+      MYSQL_USER: db-atte
+      MYSQL_PASSWORD: atte-root-pass
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      - PMA_HOST=db-atte.cpoiqs8q0a02.ap-northeast-1.rds.amazonaws.com
+      - PMA_USER=db-atte
+      - PMA_PASSWORD=atte-root-pass
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    restart: always
