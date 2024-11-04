@@ -24,7 +24,7 @@ https://atte.ddns.net<br>
 (AWS を使用していましたが、無料期間を過ぎ課金が発生した為切りました)<br>
 
 
-#　他のリポジトリ><br>
+# 他のリポジトリ
 <開発環境><br>
 https://github.com/mana62/atte-local
 <br>
