@@ -26,10 +26,10 @@ https://atte.ddns.net<br>
 
 # 他のリポジトリ
 <開発環境><br>
-https://github.com/mana62/atte-local
+https://github.com/mana62/atte-local<br>
 <br>
 <本番環境><br>
-https://github.com/mana62/atte-prod
+https://github.com/mana62/atte-prod<br>
 
 # 機能一覧
 
@@ -90,8 +90,7 @@ Laravel: 8<br>
 # クローンの流れ
 
 1. Git リポジトリのクローン<br>
-git clone git@github.com:mana62/atte-local.git
-cd atte-local<br>
+git clone git@github.com:mana62/atte-local.git<br>
 
 2. .env ファイルの作成
 cp .env.example .env<br>
