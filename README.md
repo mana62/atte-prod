@@ -48,17 +48,16 @@ https://github.com/mana62/atte-prod
 
 # 使用技術
 
-・nginx: latest<br>
-・php: 8.1-fpm<br>
-・mysql: 8.0.26<br>
-・Laravel: 8<br>
+nginx: latest<br>
+php: 8.1-fpm<br>
+mysql: 8.0.26<br>
+Laravel: 8<br>
 
 # テーブル設計
 
 ![テーブル仕様書](https://github.com/user-attachments/assets/dfd993eb-30ba-46c6-bd18-e313cedb91b4)
 
-# ER 図
-
+# ER図
 ![ER図 ](https://github.com/user-attachments/assets/8a6d8a73-fca7-46f6-abd1-1a06bcfe09fb)
 
 # 環境構築
