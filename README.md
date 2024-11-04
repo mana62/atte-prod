@@ -92,7 +92,7 @@ Laravel: 8<br>
 1. Git リポジトリのクローン<br>
 git clone git@github.com:mana62/atte-local.git<br>
 
-2. .env ファイルの作成
+2. .env ファイルの作成<br>
 cp .env.example .env<br>
 
 3. .env ファイルの編集<br>
