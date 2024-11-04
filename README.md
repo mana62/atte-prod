@@ -23,8 +23,8 @@ http://localhost:8080<br>
 https://atte.ddns.net<br>
 (AWS を使用していましたが、無料期間を過ぎ課金が発生した為切りました)<br>
 
-# 他のリポジトリ
 
+#　他のリポジトリ><br>
 <開発環境><br>
 https://github.com/mana62/atte-local
 <br>
