@@ -29,9 +29,5 @@ COPY ./src /var/www
 # Composer installを実行
 RUN composer install --no-dev --optimize-autoloader
 
-# Nginxの設定ファイルを環境ごとに切り替える
-ARG NGINX_CONF_FILE=default.conf
-COPY ./docker/nginx/${NGINX_CONF_FILE} /etc/nginx/conf.d/default.conf
-
 # アプリケーションをPHP-FPMで起動
 CMD ["php-fpm"]

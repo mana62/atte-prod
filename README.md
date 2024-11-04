@@ -90,18 +90,14 @@ https://github.com/mana62/atte-prod
 
 # クローンの流れ
 
-1.  Git リポジトリのクローン<br>
-    git clone git@github.com:mana62/atte-local.git<br>
-    cd atte-local<br>
-2.  Docker の設定<br>
-    docker compose up -d --build <br>
-3.  PHP コンテナにアクセス<br>
-    docker compose exec -it php bash<br>
-4.  Laravel パッケージのインストール<br>
-    composer install<br>
-5.  .env ファイルの作成<br>
-    cp .env.example .env<br>
-6.  .env ファイルの編集<br>
+1. Git リポジトリのクローン<br>
+git clone git@github.com:mana62/atte-local.git
+cd atte-local<br>
+
+2. .env ファイルの作成
+cp .env.example .env<br>
+
+3. .env ファイルの編集<br>
 
 DB_CONNECTION=mysql<br>
 DB_HOST=mysql<br>
@@ -109,18 +105,26 @@ DB_PORT=3306<br>
 DB_DATABASE=db-atte<br>
 DB_USERNAME=user<br>
 DB_PASSWORD=pass<br>
-
+<br>
 MAIL_MAILER=smtp<br>
 MAIL_HOST=mailhog<br>
 MAIL_PORT=1025<br>
 MAIL_FROM_ADDRESS=test@example.com<br>
 
+4. Docker の設定<br>
+docker compose up -d --build<br>
+
+5. PHP コンテナにアクセス<br>
+docker compose exec -it php bash<br>
+
+6. Laravel パッケージのインストール<br>
+composer install<br>
+
 7. アプリケーションキーの生成<br>
-   php artisan key:generate<br>
-8. Docker コンテナの再起動 (.env ファイルを読み込む)<br>
-   docker compose down<br>
-   docker compose up -d --build<br>
-9. マイグレーション<br>
-   php artisan migrate <br>
-10. シーディング<br>
-    php artisan db:seed<br>
+php artisan key:generate<br>
+
+8. マイグレーション<br>
+php artisan migrate<br>
+
+9. シーディング<br>
+php artisan db:seed<br>

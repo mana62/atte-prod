@@ -6,7 +6,7 @@ services:
       - "80:80"
     volumes:
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./src:/var/www/src/public
+      - ./src:/var/www/
     depends_on:
       - php
     restart: always
@@ -19,7 +19,7 @@ services:
         APP_ENV: local
     container_name: php
     volumes:
-      - ./src:/var/www/src/public
+      - ./src:/var/www/
     ports:
       - "9000:9000"
     environment:
